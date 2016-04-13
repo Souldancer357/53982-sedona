@@ -1,7 +1,7 @@
-# Личный проект «Седона»
+﻿# Личный проект «Седона»
 
 * Студент: [Artem Piskanov](https://up.htmlacademy.ru/htmlcss/13/user/53982).
-* Наставник: `Неизвестно`.
+* Наставник: [Екатерина Климович](https://up.htmlacademy.ru/htmlcss/13/user/84950).
 
 ---
 
