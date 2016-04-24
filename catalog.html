@@ -26,6 +26,115 @@
     <img src="#" alt="Логотип меню">
   </div>
 </header>
+<main>
+  <div class="content-top">
+    <form class="filter-form" action="#" method="get">
+      <!-- Это заголовки?-->
+      <h2 class="filter-title">Инфраструктура:</h2>
+      <div class="filter-item">
+        <input type="checkbox" name="pool" id="pool-field">
+        <label for="pool-field">Бассейн</label>
+      </div>
+      <div class="filter-item">
+        <input type="checkbox" name="parking" id="parking-field">
+        <label for="parking-field">Парковка</label>
+      </div>
+      <div class="filter-item">
+        <input type="checkbox" name="wifi" id="wifi-field">
+        <label for="wifi-field">WI-FI</label>
+      </div>
+      <h2 class="filter-title">Тип жилья:</h2>
+      <div class="filter-item">
+        <input type="checkbox" name="hotel" id="hotel-field">
+        <label for="hotel-field">Гостиница</label>
+      </div>
+      <div class="filter-item">
+        <input type="checkbox" name="motel" id="motel-field">
+        <label for="motel-field">Мотель</label>
+      </div>
+      <div class="filter-item">
+        <input type="checkbox" name="apartments" id="apartments-field">
+        <label for="apartments-field">Апартаменты</label>
+      </div>
+      <h2 class="filter-title">Стоимость в сутки (Р):</h2>
+      <button class="filter-btn" type="submit">
+        Показать
+      </button>
+    </form>
+  </div>
+  <div class="content-center">
+    <div class="found">Найдено: 3</div>
+    <div class="sort">
+      <div class="sort-title">Сортировка:</div>
+      <ul class="sort-by">
+        <li><a href="#">По цене</a></li>
+        <li><a href="#">По типу</a></li>
+        <li><a href="#">По рейтингу</a></li>
+      </ul>
+      <!--Почему инпуты текстовые, если есть намбер? -->
+      <div>
+        <input type="number" name="min" id="min-field" value="0">
+        <label for="min-field">От</label>
+      </div>
+      <div>
+        <input type="number" name="max" id="max-field" value="3000">
+        <label for="max-field">До</label>
+      </div>
+      <div class="decrease">
+        <img src="#" alt="По убыванию">
+      </div>
+      <div class="increase">
+        <img src="#" alt="По возрастанию">
+      </div>
+    </div>
+  </div>
+  <div class="content-bottom">
+    <div class="catalog-items">
+      <div class="catalog-item">
+        <img src="#" alt="Amara Resort & Spa">
+        <div class="catalog-item-title">
+          Amara Resort & Spa
+          <span class="type">Гостиница</span>
+          <span class="cost">От 3500 Р.</span>
+          <a href="#">Подробнее</a>
+          <a href="#">Забронировать</a>
+          <div class="rating">
+            <div class="rating-star"></div>
+            <div class="rating-text">Рейтинг: 8,5</div>
+          </div>
+          <div class="catalog-item">
+            <img src="#" alt="Desert Quail Inn">
+            <div class="catalog-item-title">
+              Desert Quail Inn
+              <span class="type">Мотель</span>
+              <span class="cost">От 2000 Р.</span>
+              <a href="#">Подробнее</a>
+              <a href="#">Забронировать</a>
+              <div class="rating">
+                <div class="rating-stars"></div>
+                <div class="rating-text">Рейтинг: 8,9</div>
+              </div>
+            </div>
+            <div class="catalog-item">
+              <img src="#" alt="Villas at Poco Diablo">
+              <div class="catalog-item-title">
+                Villas at Poco Diablo
+                <span class="type">Апартаменты</span>
+                <span class="cost">От 4000 Р.</span>
+                <a href="#">Подробнее</a>
+                <a href="#">Забронировать</a>
+                <div class="rating">
+                  <div class="rating-stars"></div>
+                  <div class="rating-text">Рейтинг: 9,2</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 <footer class="main-footer">
   <div class="footer-hashtag">
     <!--Здесь нужно дополнительно во что-то оборачивать текст?-->
