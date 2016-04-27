@@ -29,37 +29,50 @@
 <main>
   <div class="content-top">
     <form class="filter-form" action="#" method="get">
-      <!-- Это заголовки?-->
-      <h2 class="filter-title">Инфраструктура:</h2>
-      <div class="filter-item">
-        <input type="checkbox" name="pool" id="pool-field">
-        <label for="pool-field">Бассейн</label>
+      <div class="filter-block-left">
+        <div class="filter-title">Инфраструктура:</div>
+        <div class="filter-item">
+          <input type="checkbox" name="pool" id="pool-field">
+          <label for="pool-field">Бассейн</label>
+        </div>
+        <div class="filter-item">
+          <input type="checkbox" name="parking" id="parking-field">
+          <label for="parking-field">Парковка</label>
+        </div>
+        <div class="filter-item">
+          <input type="checkbox" name="wifi" id="wifi-field">
+          <label for="wifi-field">WI-FI</label>
+        </div>
       </div>
-      <div class="filter-item">
-        <input type="checkbox" name="parking" id="parking-field">
-        <label for="parking-field">Парковка</label>
+      <div class="filter-block-left">
+        <div class="filter-title">Тип жилья:</div>
+        <div class="filter-item">
+          <input type="checkbox" name="hotel" id="hotel-field">
+          <label for="hotel-field">Гостиница</label>
+        </div>
+        <div class="filter-item">
+          <input type="checkbox" name="motel" id="motel-field">
+          <label for="motel-field">Мотель</label>
+        </div>
+        <div class="filter-item">
+          <input type="checkbox" name="apartments" id="apartments-field">
+          <label for="apartments-field">Апартаменты</label>
+        </div>
       </div>
-      <div class="filter-item">
-        <input type="checkbox" name="wifi" id="wifi-field">
-        <label for="wifi-field">WI-FI</label>
+      <div>
+        <div class="filter-title">Стоимость в сутки (Р):</div>
+        <div>
+          <input type="text" name="min" id="min-field" value="0">
+          <label for="min-field">От</label>
+        </div>
+        <div>
+          <input type="text" name="max" id="max-field" value="3000">
+          <label for="max-field">До</label>
+        </div>
+        <button class="filter-btn" type="submit">
+          Показать
+        </button>
       </div>
-      <h2 class="filter-title">Тип жилья:</h2>
-      <div class="filter-item">
-        <input type="checkbox" name="hotel" id="hotel-field">
-        <label for="hotel-field">Гостиница</label>
-      </div>
-      <div class="filter-item">
-        <input type="checkbox" name="motel" id="motel-field">
-        <label for="motel-field">Мотель</label>
-      </div>
-      <div class="filter-item">
-        <input type="checkbox" name="apartments" id="apartments-field">
-        <label for="apartments-field">Апартаменты</label>
-      </div>
-      <h2 class="filter-title">Стоимость в сутки (Р):</h2>
-      <button class="filter-btn" type="submit">
-        Показать
-      </button>
     </form>
   </div>
   <div class="content-center">
@@ -71,20 +84,9 @@
         <li><a href="#">По типу</a></li>
         <li><a href="#">По рейтингу</a></li>
       </ul>
-      <!--Почему инпуты текстовые, если есть намбер? -->
-      <div>
-        <input type="number" name="min" id="min-field" value="0">
-        <label for="min-field">От</label>
-      </div>
-      <div>
-        <input type="number" name="max" id="max-field" value="3000">
-        <label for="max-field">До</label>
-      </div>
-      <div class="decrease">
-        <img src="#" alt="По убыванию">
-      </div>
-      <div class="increase">
-        <img src="#" alt="По возрастанию">
+      <div class="sort-icons">
+        <div class="sort-icon-decrease">По убыванию</div>
+        <div class="sort-icon-increase">По возрастанию</div>
       </div>
     </div>
   </div>
@@ -167,7 +169,6 @@
 </main>
 <footer class="main-footer">
   <div class="footer-hashtag">
-    <!--Здесь нужно дополнительно во что-то оборачивать текст?-->
     <a href="#">#Visitsedona</a>
   </div>
   <div class="footer-social">
