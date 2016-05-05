@@ -16,7 +16,8 @@ html, body {
 }
 
 body {
-  font-family: "PT Sans";
+  min-width: 1200px;
+  font-family: "PT Sans", sans-serif;
   font-weight: 300;
 }
 
@@ -42,6 +43,7 @@ a {
 .container {
   width: 1200px;
   margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /*Header*/
@@ -96,10 +98,8 @@ a {
 }
 
 .index-content {
-  float: left;
-  width: 1200px;
-  min-height: 216px;
-  padding-top: 65px;
+  padding-top: 59px;
+  padding-bottom: 50px;
   box-sizing: border-box; /*Досортировать*/
   background-color: #ffffff;
 }
@@ -107,7 +107,7 @@ a {
 .index-content-title {
   width: 450px;
   min-height: 52px;
-  margin: 0 auto 32px;
+  margin: 0 auto 28px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
@@ -138,7 +138,7 @@ a {
 .feature-title {
   width: 151px;
   min-height: 42px;
-  margin: 0 auto;
+  margin: 0 auto 65px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
@@ -179,8 +179,7 @@ a {
 .service-title {
   width: 80px;
   min-height: 21px;
-  margin: 0 auto;
-  padding-bottom: 29px;
+  margin: 0 auto 29px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
@@ -218,7 +217,7 @@ a {
 .other-feature-title {
   width: 130px;
   min-width: 42px;
-  margin: 0 auto;
+  margin: 0 auto 65px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
@@ -259,7 +258,7 @@ a {
 .search-description {
   width: 450px;
   min-height: 58px;
-  margin: 0 auto 48px;
+  margin: 0 auto 34px;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
@@ -269,11 +268,16 @@ a {
 
 /* Здесь нужно min-height, width и margin? */
 .search-btn {
+  display: block;
+  width: 570px;
+  margin: 0 auto;
+  padding: 30px 0;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 26px;
-  color: #000000;
+  color: #ffffff;
+  background-color: #766357;
 }
 
 .map {
@@ -284,6 +288,8 @@ a {
 .content-top {
   background: url("../img/filter-bg.jpg"); /*Это к чему относится?*/
   height: 217px;
+  padding: 30px 73px;
+  box-sizing: border-box;
 }
 
 .filter-title {
@@ -305,10 +311,8 @@ a {
 /*Не получилось сделать отступы для content-top*/
 .filter-block-left-first {
   float: left;
-  width: 313px;
-  height: 217px;
-  padding-top: 30px;
-  padding-left: 73px;
+  width: 240px;
+  height: 157px;
   text-align: left;
   box-sizing: border-box;
 }
@@ -316,46 +320,44 @@ a {
 .filter-block-left-second {
   float: left;
   width: 288px;
-  height: 217px;
-  padding-top: 30px;
+  height: 157px;
   text-align: left;
   box-sizing: border-box;
 }
 
 .filter-block-right {
   float: right;
-  width: 400px;
-  height: 217px;
-  padding-top: 30px;
-  padding-right: 73px;
+  width: 328px;
+  height: 157px;
+  height: 157px;
   text-align: left;
   box-sizing: border-box;
 }
 
 .content-center {
+  padding: 30px 73px;
+  box-sizing: border-box;
   background-color: #fefefe;
 }
 
 .found {
   float: left;
-  width: 237px;
-  min-height: 87px;
-  padding-top: 33px;
-  padding-left: 73px;
+  width: 165px;
+  min-height: 26px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 26px;
   text-align: left;
-  box-sizing: border-box;
   color: #000000;
 }
 
+/*Не опускается!*/
 .sort-title {
   float: left;
   width: 116px;
-  min-height: 87px;
-  padding-top: 38px;
+  min-height: 26px;
+  padding-top: 7px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 12px;
@@ -365,11 +367,16 @@ a {
   color: #000000;
 }
 
+/*Если смотреть в хроме, там есть класс sort 1200 на 0. Это не нормально?*/
+
 .sort-by {
   float: left;
   width: 247px;
-  min-height: 87px;
-  text-align: right;
+  text-align: left;
+}
+
+.sort-by li {
+  display: inline-block;
 }
 
 .sort-by a {
@@ -383,22 +390,39 @@ a {
 .sort-icons {
   float: right;
   width: 400px;
-  height: 87px;
-  padding-right: 73px;
   text-align: right;
   box-sizing: border-box;
+}
+
+.sort-icon-decrease {
+  display: inline-block;
+}
+
+.sort-icon-increase {
+  display: inline-block;
 }
 
 .content-bottom {
   background-color: #fefefe;
 }
 
+.catalog-item {
+  height: 151px;
+  padding: 30px 73px;
+  border-top: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.catalog-item:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .catalog-item-img {
   float: left;
-  width: 237px;
-  height: 150px;
-  padding-top: 31px;
-  padding-left: 73px;
+  width: 135px;
+  height: 90px;
+  padding-top: 0;
+  margin-right: 30px;
   text-align: left;
   box-sizing: border-box;
 }
@@ -406,24 +430,27 @@ a {
 .catalog-item-info {
   float: left;
   width: 363px;
-  height: 150px;
-  padding-top: 29px;
+  height: 90px;
   text-align: left;
   vertical-align: top; /*А это к чему относится?*/
   box-sizing: border-box;
 }
 
 .catalog-item-title {
-  margin-bottom: 12px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 26px;
+}
+
+.catalog-item-title a {
   color: #000000;
 }
 
 .catalog-item-type {
   display: inline-block;
+  width: 110px;
+  margin-right: 6px;
   margin-bottom: 15px;
   text-transform: uppercase;
   font-weight: 300;
@@ -440,16 +467,36 @@ a {
   color: #333333;
 }
 
+.catalog-item-btn {
+  display: inline-block;
+  width: 110px;
+  height: 27px;
+  margin-right: 6px;
+  padding: 5px 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  box-sizing: border-box;
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.catalog-item-btn:nth-child(2) {
+  width: 142px;
+  background-color: #766357;
+}
+
 .catalog-item-rating-info {
   float: right;
   width: 400px;
-  height: 150px;
-  padding-right: 73px;
   text-align: right;
   box-sizing: border-box;
 }
 
 .main-footer {
+  text-align: center;
   background-color: #fefefe;
 }
 
@@ -457,9 +504,14 @@ a {
   float: left;
   width: 400px;
   min-height: 120px;
+  padding: 45px 0;
+  box-sizing: border-box;
 }
 
 .footer-hashtag a {
+  width: 140px;
+  min-height: 26px;
+  margin: 0 auto;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
@@ -467,30 +519,40 @@ a {
   color: #000000;
 }
 
-.main-footer .footer-hashtag a {
-  width: 140px;
-  min-height: 26px;
-  margin: 0 auto;
-}
-
 .footer-social {
   float: left;
   width: 400px;
   min-height: 120px;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+
+.social-btn {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .footer-copyright {
   float: left;
   width: 400px;
   min-height: 120px;
+  padding: 40px 0;
+  box-sizing: border-box;
 }
 
 .footer-copyright .copyright {
+  display: inline-block;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
   line-height: 26px;
+  vertical-align: middle;
   color: #000000;
+}
+
+.footer-copyright a {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .clearfix:after {
