@@ -6,8 +6,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="container">
 <header class="main-header">
-  <nav class="main-navigation">
+  <nav class="main-navigation clearfix">
     <ul>
       <li>
         <a href="#">Информация</a>
@@ -23,9 +24,11 @@
       </li>
     </ul>
   </nav>
+  <!--
   <div class="header-logo">
     <img src="img/logo.png" width="138" height="70" alt="Логотип меню">
   </div>
+  -->
 </header>
 <main>
   <div class="index-logo">
@@ -35,7 +38,8 @@
     <h2 class="index-content-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
     <p class="index-content-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
   </div>
-  <div class="feature">
+  <!--Изменил классы!-->
+  <div class="feature clearfix">
     <div class="feature-text">
       <div class="feature-title">Настоящий городок</div>
       <p class="feature-description">Седона - не аттракцион для туристов, там течет своя жизнь</p>
@@ -44,7 +48,7 @@
       <img src="img/feature1.jpg" width="800" height="256" alt="Фотография города">
     </div>
   </div>
-  <div class="services">
+  <div class="services clearfix">
     <div class="service">
       <div class="service-title">Жилье</div>
       <p class="service-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -58,17 +62,18 @@
       <p class="service-description">Не только китайского, но и местного производства!</p>
     </div>
   </div>
-  <div class="feature">
-    <div class="feature-text">
+  <!--Изменил классы!-->
+  <div class="feature clearfix">
+    <div class="feature-text feature-second-text">
       <div class="feature-title">Там есть мост дьявола</div>
-      <p class="feature-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+      <p class="feature-description feature-description-second">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
     </div>
     <div class="feature-image">
       <img src="img/feature2.jpg" width="800" height="256" alt="Фотография моста">
     </div>
   </div>
-  <div class="other-features">
-    <div class="other-feature">
+  <div class="other-features clearfix">
+    <div class="other-feature ">
       <div class="other-feature-title">Небольшая площадь</div>
       <p class="other-feature-description">Все достопримечательности находятся очень близко</p>
     </div>
@@ -83,14 +88,15 @@
   </div>
   <div class="search">
     <div class="search-title">Заинтересовались?</div>
-    <p class="search-description">Укажите предполагаемые даты поездки, мы покажем вам лучшие предложения гостиниц в Седоне</p>
+    <!--Добавил br -->
+    <p class="search-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
     <a class="search-btn" href="#">Поиск гостиницы в Седоне</a>
   </div>
   <div class="map">
     <img src="img/map.jpg" width="1200" height="593" alt="Карта">
   </div>
 </main>
-<footer class="main-footer">
+<footer class="main-footer clearfix">
   <div class="footer-hashtag">
     <a href="#">#Visitsedona</a>
   </div>
@@ -100,9 +106,10 @@
     <a class="social-btn social-btn-youtube" href="#">Ютуб</a>
   </div>
   <div class="footer-copyright">
-    <div class="copyright">Websiteby</div>
+    <div class="copyright">Website By</div>
     <a href="https://htmlacademy.ru"><img src="img/academy.png" width="113" height="39" alt="HTML Academy"></a>
   </div>
 </footer>
+</div>
 </body>
 </html>
