@@ -8,10 +8,13 @@
 <body>
 <div class="container">
   <header class="main-header">
+    <a href="index.html" class="header-logo">
+      <img src="img/logo.png" width="138" height="70" alt="Логотип меню">
+    </a>
     <nav class="main-navigation clearfix">
       <ul>
         <li>
-          <a href="#">Информация</a>
+          <a class="main-navigation-current" href="#">Информация</a>
         </li>
         <li>
           <a href="#">Фото и видео</a>
@@ -24,11 +27,6 @@
         </li>
       </ul>
     </nav>
-    <!--
-  <div class="header-logo">
-    <img src="img/logo.png" width="138" height="70" alt="Логотип меню">
-  </div>
-    -->
   </header>
   <main>
     <div class="content-top clearfix">
@@ -36,11 +34,11 @@
         <div class="filter-block-left filter-block-left-first">
           <div class="filter-title">Инфраструктура:</div>
           <div class="filter-item">
-            <input type="checkbox" name="pool" id="pool-field">
+            <input type="checkbox" name="pool" id="pool-field" disabled>
             <label for="pool-field">Бассейн</label>
           </div>
           <div class="filter-item">
-            <input type="checkbox" name="parking" id="parking-field">
+            <input type="checkbox" name="parking" id="parking-field" disabled checked>
             <label for="parking-field">Парковка</label>
           </div>
           <div class="filter-item">
@@ -84,13 +82,13 @@
       <div class="sort">
         <div class="sort-title">Сортировка:</div>
         <ul class="sort-by">
-          <li><a href="#">По цене</a></li>
+          <li><a class="current" href="#">По цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По рейтингу</a></li>
         </ul>
         <div class="sort-icons">
-          <div class="sort-icon-decrease">По убыванию</div>
-          <div class="sort-icon-increase">По возрастанию</div>
+          <div class="sort-icon sort-icon-decrease">По убыванию</div>
+          <div class="sort-icon sort-icon-increase sort-icon-current">По возрастанию</div>
         </div>
       </div>
     </div>
@@ -111,12 +109,17 @@
               <span class="catalog-item-cost">От 3500 Р.</span>
             </div>
             <div class="catalog-item-btns">
-              <a class="catalog-item-btn" href="#">Подробнее</a>
-              <a class="catalog-item-btn" href="#">Забронировать</a>
+              <a class="catalog-item-btn detailed" href="#">Подробнее</a>
+              <a class="catalog-item-btn reserve" href="#">Забронировать</a>
             </div>
           </div>
           <div class="catalog-item-rating-info">
-            <div class="catalog-item-stars"></div>
+            <div class="catalog-item-stars">
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+            </div>
             <div class="catalog-item-rating">Рейтинг: <span>8,5</span></div>
           </div>
         </div>
@@ -140,14 +143,17 @@
             </div>
           </div>
           <div class="catalog-item-rating-info">
-            <div class="catalog-item-stars"></div>
+            <div class="catalog-item-stars">
+              <span class="star"></span>
+              <span class="star"></span>
+            </div>
             <div class="catalog-item-rating">Рейтинг: <span>8,9</span></div>
           </div>
         </div>
         <div class="catalog-item clearfix">
           <div class="catalog-item-img">
             <a href="#">
-              <img src="img/hotel3.png" width="135" height="90" alt="Villas at Poco Diablo">
+              <img src="img/hotel3.jpg" width="135" height="90" alt="Villas at Poco Diablo">
             </a>
           </div>
           <div class="catalog-item-info">
@@ -164,14 +170,18 @@
             </div>
           </div>
           <div class="catalog-item-rating-info">
-            <div class="catalog-item-stars"></div>
+            <div class="catalog-item-stars">
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+            </div>
             <div class="catalog-item-rating">Рейтинг: <span>9,2</span></div>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <footer class="main-footer clearfix">
+  <footer class="footer clearfix">
     <div class="footer-hashtag">
       <a href="#">#Visitsedona</a>
     </div>
@@ -182,7 +192,7 @@
     </div>
     <div class="footer-copyright">
       <div class="copyright">Website By</div>
-      <a href="https://htmlacademy.ru"><img src="img/academy.png" width="113" height="39" alt="HTML Academy"></a>
+      <a href="https://htmlacademy.ru"></a>
     </div>
   </footer>
 </div>

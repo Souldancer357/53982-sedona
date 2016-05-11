@@ -10,6 +10,132 @@
   font-weight: 300;
 }
 
+.icons {
+  background-image: url("../img/sprite-icons.png");
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.icons-ico-arrow-active {
+  width: 11px;
+  height: 10px;
+  background-position: -10px -10px;
+}
+
+.icons-ico-arrow-hvr {
+  width: 11px;
+  height: 10px;
+  background-position: -41px -10px;
+}
+
+.icons-ico-calendar-down {
+  width: 21px;
+  height: 22px;
+  background-position: -72px -10px;
+}
+
+.icons-ico-calendar-hvr {
+  width: 21px;
+  height: 22px;
+  background-position: -113px -10px;
+}
+
+.icons-ico-checkbox {
+  width: 22px;
+  height: 22px;
+  background-position: -154px -10px;
+}
+
+.icons-ico-checkbox-active {
+  width: 26px;
+  height: 22px;
+  background-position: -196px -10px;
+}
+
+.icons-ico-decrease-down {
+  width: 12px;
+  height: 3px;
+  background-position: -242px -10px;
+}
+
+.icons-ico-decrease-hvr {
+  width: 12px;
+  height: 3px;
+  background-position: -274px -10px;
+}
+
+.icons-ico-footer-logo {
+  width: 113px;
+  height: 39px;
+  background-position: -306px -10px;
+}
+
+.icons-ico-footer-logo-hvr {
+  width: 113px;
+  height: 39px;
+  background-position: -439px -10px;
+}
+
+.icons-ico-increase-down {
+  width: 11px;
+  height: 11px;
+  background-position: -572px -10px;
+}
+
+.icons-ico-increase-hvr {
+  width: 11px;
+  height: 11px;
+  background-position: -603px -10px;
+}
+
+.icons-ico-social-fb {
+  width: 10px;
+  height: 19px;
+  background-position: -634px -10px;
+}
+
+.icons-ico-social-tw {
+  width: 17px;
+  height: 15px;
+  background-position: -664px -10px;
+}
+
+.icons-ico-social-yt {
+  width: 20px;
+  height: 16px;
+  background-position: -701px -10px;
+}
+
+.icons-ico-star {
+  width: 17px;
+  height: 17px;
+  background-position: -741px -10px;
+}
+
+.sprite-services {
+  background-image: url("../img/sprite-services.png");
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.sprite-services-service1 {
+  width: 75px;
+  height: 72px;
+  background-position: -10px -10px;
+}
+
+.sprite-services-service2 {
+  width: 74px;
+  height: 70px;
+  background-position: -105px -10px;
+}
+
+.sprite-services-service3 {
+  width: 64px;
+  height: 76px;
+  background-position: -199px -10px;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -41,9 +167,14 @@ a {
 }
 
 .container {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.main-header {
+  position: relative;
 }
 
 /*Header*/
@@ -52,12 +183,13 @@ a {
   background-color: #ffffff;
 }
 
-.main-navigation .header-logo {
+/*.main-navigation .header-logo {
   float: left;
   width: 138px;
   height: 56px;
   margin: 0 auto;
 }
+*/
 
 .main-navigation li {
   float: left;
@@ -70,6 +202,11 @@ a {
   font-size: 14px;
   line-height: 26px;
 }
+
+.main-navigation li:hover {
+  color: #81b3d2;
+}
+
 
 .main-navigation li:nth-child(2) {
   margin-right: 98px;
@@ -84,11 +221,52 @@ a {
   color: #000000;
 }
 
+.main-navigation a:hover {
+  color: #81b3d2;
+}
+
+.main-navigation a:active {
+  color: #b2b2b2;
+}
+
+.main-navigation .main-navigation-current,
+.main-navigation .main-navigation-current:hover{
+  color: #766357;
+}
+
+.main-navigation .main-navigation-current:active {
+ color: #d6d0cc;
+}
+
+
+.header-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: 0 auto;
+  width: 138px;
+  height: 70px;
+  z-index: 2;
+}
+
 .index-logo {
   background: url("../img/bg.jpg") 0 0 no-repeat;
   height: 507px;
   padding-top: 76px;
-  box-sizing: border-box; /*Это блочная модель или оформление?*/
+  box-sizing: border-box; /*Это блочная модель или оформление? Это оформление.*/
+  position: relative;
+}
+
+.index-logo::after {
+  content: "";
+  background: url("../img/plate.png") 0 0 no-repeat;
+  width: 1200px;
+  height: 57px;
+  display: block;
+  position: absolute;
+  bottom: 0;
 }
 
 .index-logo img {
@@ -138,12 +316,25 @@ a {
 .feature-title {
   width: 151px;
   min-height: 42px;
-  margin: 0 auto 65px;
+  margin: 0 auto 27px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 21px;
   color: #ffffff;
+}
+
+.feature-title::after {
+  content: "— №1 —";
+  display: block;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.feature-second-text .feature-title::after {
+  content: "— №2 —";
 }
 
 .feature-description {
@@ -176,10 +367,37 @@ a {
   background-color: #ffffff;
 }
 
+.service::before {
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  background: url("../img/sprite-services.png");
+  margin: 0 auto 30px;
+}
+
+.service:nth-child(1)::before {
+  width: 75px;
+  height: 76px;
+  background-position: -1px -2px;
+}
+
+.service:nth-child(2)::before {
+  width: 75px;
+  height: 76px;
+  background-position: -91px -2px;
+}
+
+.service:nth-child(3)::before {
+  width: 75px;
+  height: 76px;
+  background-position: -180px -2px;
+}
+
 .service-title {
-  width: 80px;
+  display: block;
+  width: 110px;
   min-height: 21px;
-  margin: 0 auto 29px;
+  margin: 0 auto 25px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
@@ -203,7 +421,7 @@ a {
 }
 
 .other-feature {
-  padding-top: 50px;
+  padding-top: 47px;
   box-sizing: border-box;
 }
 
@@ -217,13 +435,32 @@ a {
 .other-feature-title {
   width: 130px;
   min-width: 42px;
-  margin: 0 auto 65px;
+  margin: 0 auto 24px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 21px;
   color: #000000;
 }
+
+.other-feature-title::after {
+  content: "— №3 —";
+  display: block;
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.other-feature:nth-child(2) .other-feature-title::after {
+  content: "— №4 —";
+}
+
+.other-feature:nth-child(3) .other-feature-title::after {
+  content: "— №5 —";
+}
+
+
 
 .other-feature-description {
   width: 275px;
@@ -247,7 +484,7 @@ a {
 .search-title {
   width: 310px;
   min-height: 24px;
-  margin: 0 auto 34px;
+  margin: 0 auto 31px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 30px;
@@ -258,7 +495,7 @@ a {
 .search-description {
   width: 450px;
   min-height: 58px;
-  margin: 0 auto 34px;
+  margin: 0 auto 37px;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
@@ -287,7 +524,7 @@ a {
 
 .content-top {
   background: url("../img/filter-bg.jpg"); /*Это к чему относится?*/
-  padding: 25px 73px 33px;
+  padding: 25px 73px 12px;
   box-sizing: border-box;
 }
 
@@ -299,12 +536,70 @@ a {
   color: #ffffff;
 }
 
+/*
 .filter-item label {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
+}
+
+*/
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  /*Можно ли ширину задавать в зависимотсти от контента?*/
+  width: 130px;
+  margin: 24px 0;
+  padding-left: 40px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-position: -154px -10px;
+  background-image: url("../img/sprite-icons.png");
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 22px;
+  background-position: -196px -10px;
+  background-image: url("../img/sprite-icons.png");
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:disabled + label{
+  cursor: auto;
+}
+
+input[type="checkbox"]:disabled + label::before{
+  opacity: 0.3;
+}
+
+input[type="checkbox"]:disabled:checked + label::after{
+  opacity: 0.3;
 }
 
 /*Не получилось сделать отступы для content-top*/
@@ -320,6 +615,7 @@ a {
 .filter-block-left-second {
   float: left;
   width: 288px;
+  padding-left: 14px;
   /*height: 157px;*/
   text-align: left;
   box-sizing: border-box;
@@ -390,7 +686,22 @@ a {
   font-weight: 300;
   font-size: 12px;
   line-height: 18px;
+  color: #b1b1b1;
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-by .current {
+  color: #81b3d2;
+  border-bottom: none;
+}
+
+.sort-by a:hover {
+  color: #81b3d2;
+}
+
+.sort-by a:active {
   color: #000000;
+  border-bottom: none;
 }
 
 .sort-icons {
@@ -400,12 +711,48 @@ a {
   box-sizing: border-box;
 }
 
-.sort-icon-decrease {
+.sort-icon {
+  position: relative;
   display: inline-block;
+  width: 11px;
+  height: 10px;
+  margin-left: 12px;
+  font-size: 0px;
+  background-color: white;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
-.sort-icon-increase {
-  display: inline-block;
+.sort-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 11px;
+  height: 10px;
+  opacity: 0.3;
+  background-position: -41px -10px;
+  background-image: url("../img/sprite-icons.png");
+  background-repeat: no-repeat;
+}
+
+.sort-icon:hover::before {
+  opacity: 1;
+}
+
+.sort-icon:active::before {
+  background-position: -10px -10px;
+  opacity: 1;
+}
+
+.sort-icon-decrease {
+  transform: rotate(180deg);
+}
+
+.sort-icon-current::before {
+  background-position: -10px -10px;
+  opacity: 1;
 }
 
 .content-bottom {
@@ -436,7 +783,7 @@ a {
 .catalog-item-info {
   float: left;
   width: 363px;
-  height: 90px;
+  height: 91px;
   text-align: left;
   vertical-align: top; /*А это к чему относится?*/
   box-sizing: border-box;
@@ -453,6 +800,14 @@ a {
 
 .catalog-item-title a {
   color: #000000;
+}
+
+.catalog-item-title a:hover {
+  color: #81b3d2;
+}
+
+.catalog-item-title a:active {
+  color: #b2b2b2;
 }
 
 .catalog-item-type {
@@ -480,7 +835,7 @@ a {
   width: 110px;
   height: 27px;
   margin-right: 2px;
-  padding: 4px 0;
+  padding: 3px 0;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
@@ -496,6 +851,37 @@ a {
   background-color: #766357;
 }
 
+.catalog-item-btn:hover {
+  background-color: #669ec0;
+}
+
+.catalog-item-btn:active {
+  color: #88b6d1;
+  background-color: #5496bd;
+}
+
+.catalog-item-btn:nth-child(2):hover {
+  background-color: #604e43;
+}
+
+.catalog-item-btn:nth-child(2):active {
+  color: #857871;
+  background-color: #503e33;
+}
+
+.star::before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 17px;
+  height: 17px;
+  background: url("../img/sprite-icons.png");
+  background-position: -741px -10px;
+  background-repeat: no-repeat;
+}
+
+
+
 .catalog-item-rating-info {
   float: right;
   width: 150px;
@@ -503,9 +889,32 @@ a {
   box-sizing: border-box;
 }
 
-.main-footer {
+.catalog-item-rating{
+  display: inline-block;
+  width: 110px;
+  height: 27px;
+  padding: 3px 0;
+  margin-top: 43px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  box-sizing: border-box;
+  color: #666666;
+  background-color: #f2f2f2;
+}
+
+.footer {
   text-align: center;
   background-color: #fefefe;
+}
+
+.main-footer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(254, 254, 254, 0.9);
+  z-index: 2;
 }
 
 .footer-hashtag {
@@ -531,13 +940,65 @@ a {
   float: left;
   width: 400px;
   min-height: 120px;
-  padding: 30px 0;
+  padding: 35px 0;
+  font-size: 0;
+  text-align: center;
   box-sizing: border-box;
 }
 
 .social-btn {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
+  width: 46px;
+  height: 48px;
+  margin: 0 3px;
+
+  font-size: 0;
+  text-decoration: none;
+
+  background-color: #81b3d2;
+  position: relative;
+}
+
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
+/*Как затемнить саму картинку? Сама картинка должна быть синей*/
+.social-btn:active {
+  background-color: #5496bd;
+}
+
+.social-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite-icons.png");
+  background-repeat: no-repeat;
+}
+
+.social-btn-twitter::before {
+  width: 17px;
+  height: 15px;
+  background-position: -664px -10px;
+}
+
+.social-btn-facebook::before {
+  width: 10px;
+  height: 19px;
+  background-position: -634px -10px;
+}
+
+.social-btn-youtube::before {
+  width: 20px;
+  height: 16px;
+  background-position: -701px -10px;
+}
+
+.social-btn:active::before {
+  opacity: 0.3;
 }
 
 .footer-copyright {
@@ -548,6 +1009,7 @@ a {
   box-sizing: border-box;
 }
 
+/*Здесь нужна ширина и высота или она наследуется?*/
 .footer-copyright .copyright {
   display: inline-block;
   text-transform: uppercase;
@@ -559,8 +1021,33 @@ a {
 }
 
 .footer-copyright a {
+  position: relative;
   display: inline-block;
+  width: 113px;
+  height: 39px;
   vertical-align: middle;
+}
+
+.footer-copyright a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 113px;
+  height: 39px;
+  background-position: -306px -10px;
+  background-image: url("../img/sprite-icons.png");
+  background-repeat: no-repeat;
+}
+
+.footer-copyright a:hover::before {
+  background-position: -439px -10px;
+}
+
+.footer-copyright a:active::before {
+  background-position: -306px -10px;
+  opacity: 0.3;
 }
 
 .clearfix:after {
@@ -568,3 +1055,4 @@ a {
   display: table;
   clear: both;
 }
+
