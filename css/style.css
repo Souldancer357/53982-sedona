@@ -112,6 +112,18 @@
   background-position: -741px -10px;
 }
 
+.icons-ico-xcheckbox-disabled- {
+  width: 22px;
+  height: 22px;
+  background-position: -778px -10px;
+}
+
+.icons-ico-xcheckbox-disabled-active {
+  width: 26px;
+  height: 22px;
+  background-position: -820px -10px;
+}
+
 .sprite-services {
   background-image: url("../img/sprite-services.png");
   background-repeat: no-repeat;
@@ -207,7 +219,6 @@ a {
   color: #81b3d2;
 }
 
-
 .main-navigation li:nth-child(2) {
   margin-right: 98px;
 }
@@ -230,14 +241,13 @@ a {
 }
 
 .main-navigation .main-navigation-current,
-.main-navigation .main-navigation-current:hover{
+.main-navigation .main-navigation-current:hover {
   color: #766357;
 }
 
 .main-navigation .main-navigation-current:active {
- color: #d6d0cc;
+  color: #d6d0cc;
 }
-
 
 .header-logo {
   position: absolute;
@@ -420,16 +430,16 @@ a {
   float: right;
 }
 
-.other-feature {
-  padding-top: 47px;
-  box-sizing: border-box;
+.other-features {
+  background-color: #eeeeee;
 }
 
 .other-feature {
   float: left;
   width: 400px;
   min-height: 256px;
-  background-color: #eeeeee;
+  padding-top: 47px;
+  box-sizing: border-box;
 }
 
 .other-feature-title {
@@ -459,8 +469,6 @@ a {
 .other-feature:nth-child(3) .other-feature-title::after {
   content: "— №5 —";
 }
-
-
 
 .other-feature-description {
   width: 275px;
@@ -590,16 +598,16 @@ input[type="checkbox"]:checked + label::after {
   background-repeat: no-repeat;
 }
 
-input[type="checkbox"]:disabled + label{
+input[type="checkbox"]:disabled + label {
   cursor: auto;
 }
 
-input[type="checkbox"]:disabled + label::before{
-  opacity: 0.3;
+input[type="checkbox"]:disabled + label::before {
+  background-position: -778px -10px;
 }
 
-input[type="checkbox"]:disabled:checked + label::after{
-  opacity: 0.3;
+input[type="checkbox"]:disabled:checked + label::after {
+  background-position: -820px -10px;
 }
 
 /*Не получилось сделать отступы для content-top*/
@@ -880,8 +888,6 @@ input[type="checkbox"]:disabled:checked + label::after{
   background-repeat: no-repeat;
 }
 
-
-
 .catalog-item-rating-info {
   float: right;
   width: 150px;
@@ -889,7 +895,7 @@ input[type="checkbox"]:disabled:checked + label::after{
   box-sizing: border-box;
 }
 
-.catalog-item-rating{
+.catalog-item-rating {
   display: inline-block;
   width: 110px;
   height: 27px;
