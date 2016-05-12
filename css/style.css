@@ -536,6 +536,14 @@ a {
   box-sizing: border-box;
 }
 
+.filter-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
 /*
 .filter-item label {
   text-transform: uppercase;
@@ -1196,13 +1204,29 @@ input[type="checkbox"]:disabled:checked + label::after {
   color: #000000;
   background-color: #ffffff;
   /*Кажется нужно поправить тень :D*/
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
 
+}
+
+.find-form .arrival {
+  margin-bottom: 30px;
+  font-size: 0;
+}
+
+.find-form .departure {
+  margin-bottom: 30px;
+  font-size: 0;
+}
+
+.find-form .age {
+  font-size: 0;
+  margin-bottom: 55px;
 }
 
 .find-form label {
   display: inline-block;
 
-  width: 110px;
+  width: 115px;
   padding: 6px 0;
   text-transform: uppercase;
   font-weight: 500;
@@ -1220,7 +1244,6 @@ input[type="checkbox"]:disabled:checked + label::after {
   width: 345px;
   height: 38px;
   margin: 0;
-  margin-bottom: 30px;
   padding: 6px 15px;
   padding-right: 40px;
 
@@ -1228,7 +1251,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   font-weight: 500;
   font-size: 14px;
   line-height: 26px;
-  font-family: "PT Sans", "Arial", sans-serif;
+  /*font-family: "PT Sans", "Arial", sans-serif;*/
 
   vertical-align: top;
 
@@ -1244,18 +1267,16 @@ input[type="checkbox"]:disabled:checked + label::after {
 .child {
   display: inline-block;
   vertical-align: top;
-}
-
-.age .adult {
-  float: left;
-}
-
-.age .child {
-  float: right;
+  width: 50%;
 }
 
 .age input {
   width: 114px;
+}
+
+.age .child-quantity {
+  margin-left: 50px;
+  width: 65px;
 }
 
 .find-btn {
@@ -1263,8 +1284,6 @@ input[type="checkbox"]:disabled:checked + label::after {
   width: 458px;
   height: 58px;
   padding: 16px 0;
-  /*Временно*/
-  margin-top: 25px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
