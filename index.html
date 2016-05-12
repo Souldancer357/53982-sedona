@@ -110,6 +110,28 @@
       <a href="https://htmlacademy.ru"></a>
     </div>
   </footer>
-</div>
+  <div class="modal-content">
+    <form class="find-form" action="#" method="post">
+      <div class="arrival">
+        <label class="arrival-date" for="arrival-field">Дата заезда:</label>
+        <input type="text" name="arrival" id="arrival-field" value="24 апреля 2016">
+      </div>
+      <div class="departure">
+        <label class="departure-date" for="departure-field">Дата выезда:</label>
+        <input type="text" name="departure" id="departure-field" value="4 июля 2016">
+      </div>
+      <div class="age clearfix">
+        <div class="adult">
+          <label class="adult-quantity" for="adult-field">Взрослые:</label>
+          <input type="text" name="adult" id="adult-field" value="2">
+        </div>
+        <div class="child">
+          <label class="child-quantity" for="child-field">Дети:</label>
+          <input type="text" name="adult" id="child-field" value="0">
+        </div>
+      </div>
+      <button class="find-btn" type="submit">Найти</button>
+    </form>
+  </div>
 </body>
 </html>

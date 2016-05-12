@@ -62,14 +62,29 @@
           </div>
         </div>
         <div class="filter-block-right">
-          <div class="filter-title">Стоимость в сутки (Р):</div>
-          <div>
-            <input type="text" name="min" id="min-field" value="0">
-            <label for="min-field">От</label>
+          <div class="filter-block-right-title">Стоимость в сутки (Р):</div>
+          <div class="price-controls">
+            <label class="min-price">От <input type="text" name="min-price" value="0"></label>
+            <label class="max-price">До <input type="text" name="max-price" value="3000"></label>
+            <!--
+            <div>
+              <label class="min-price" for="min-field">От</label>
+              <input type="text" name="min" id="min-field" value="0">
+
+            </div>
+            <div>
+              <label class="max-price" for="max-field">До</label>
+              <input type="text" name="max" id="max-field" value="3000">
+
+            </div>
+            -->
           </div>
-          <div>
-            <input type="text" name="max" id="max-field" value="3000">
-            <label for="max-field">До</label>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
           </div>
           <button class="filter-btn" type="submit">
             Показать
