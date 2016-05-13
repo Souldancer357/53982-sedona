@@ -93,7 +93,10 @@
       <a class="search-btn" href="#">Поиск гостиницы в Седоне</a>
     </div>
     <div class="map">
-      <img src="img/map.jpg" width="1200" height="593" alt="Карта">
+      <!--<img src="img/map.jpg" width="1200" height="593" alt="Карта">-->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d683833.4933431448!2d-112.23339708845536!3d34.96357511471823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1463169140348"
+        width="1200" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
   </main>
   <footer class="footer main-footer clearfix">
@@ -132,12 +135,53 @@
         <div class="child">
           <label class="child-quantity" for="child-field">Дети:</label>
           <span class="quantity-btn quantity-btn-decrease"></span>
-          <input type="text" name="adult" id="child-field" value="0">
+          <input type="text" name="child" id="child-field" value="0">
           <span class="quantity-btn quantity-btn-increase"></span>
         </div>
       </div>
       <button class="find-btn" type="submit">Найти</button>
     </form>
   </div>
+</div>
+>
+<script>
+  var link = document.querySelector(".search-btn");
+  var popup = document.querySelector(".modal-content");
+  var form = popup.querySelector("form");
+  var arrival_date = popup.querySelector("[name=arrival]");
+  var departure_date = popup.querySelector("[name=departure]");
+  var adult_quantity = popup.querySelector("[name=adult]");
+  var child_quantity = popup.querySelector("[name=child]");
+
+  link.addEventListener("click", function (event) {
+    if (popup.classList.contains("modal-content-show")) {
+      event.preventDefault();
+      popup.classList.remove("modal-content-show");
+      popup.classList.remove("modal-error");
+    } else {
+      event.preventDefault();
+      popup.classList.add("modal-content-show");
+    }
+  });
+  form.addEventListener("submit", function (event) {
+    if (!arrival_date.value || !departure_date.value || !adult_quantity.value || !child_quantity.value) {
+      event.preventDefault();
+      popup.classList.remove("modal-error");
+      popup.offsetWidth = popup.offsetWidth;
+      popup.classList.add("modal-error");
+      console.log("Все поля должны быть заполнены");
+    }
+  });
+  window.addEventListener("keydown", function (event) {
+    if (event.keyCode === 27) {
+      if (popup.classList.contains("modal-content-show")) {
+        popup.classList.remove("modal-content-show");
+        popup.classList.remove("modal-error");
+      }
+    }
+  });
+
+  <!--var map = document.querySelector(".map");-->
+</script>
 </body>
 </html>
