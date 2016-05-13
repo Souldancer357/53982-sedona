@@ -113,31 +113,27 @@
   <div class="modal-content">
     <form class="find-form" action="#" method="post">
       <div class="arrival">
-        <label class="arrival-date" for="arrival-field">Дата заезда:</label>
-        <input class="current" type="text" name="arrival" id="arrival-field" value="24 апреля 2016">
+        <label for="arrival-field">Дата заезда:</label>
+        <input class="arrival-date" type="text" name="arrival" id="arrival-field" value="24 апреля 2016">
         <span class="ico-calendar"></span>
-        </input>
       </div>
       <div class="departure">
-        <label class="departure-date" for="departure-field">Дата выезда:</label>
-        <input type="text" name="departure" id="departure-field" value="4 июля 2016">
+        <label for="departure-field">Дата выезда:</label>
+        <input class="departure-date" type="text" name="departure" id="departure-field" value="4 июля 2016">
         <span class="ico-calendar"></span>
-        </input>
       </div>
       <div class="age">
         <div class="adult">
           <label class="adult-quantity" for="adult-field">Взрослые:</label>
+          <span class="quantity-btn quantity-btn-decrease"></span>
           <input type="text" name="adult" id="adult-field" value="2">
-            <span class="decrease"></span>
-            <span class="increase"></span>
-          </input>
+          <span class="quantity-btn quantity-btn-increase"></span>
         </div>
         <div class="child">
           <label class="child-quantity" for="child-field">Дети:</label>
+          <span class="quantity-btn quantity-btn-decrease"></span>
           <input type="text" name="adult" id="child-field" value="0">
-            <span class="decrease"></span>
-            <span class="increase"></span>
-          </input>
+          <span class="quantity-btn quantity-btn-increase"></span>
         </div>
       </div>
       <button class="find-btn" type="submit">Найти</button>

@@ -1227,7 +1227,7 @@ input[type="checkbox"]:disabled:checked + label::after {
 }
 
 .find-form .arrival,
-.find-form .departure{
+.find-form .departure {
   position: relative;
   margin-bottom: 30px;
   font-size: 0;
@@ -1282,7 +1282,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   background-color: #ebebeb;
 }
 
-.find-form .current {
+.find-form input:focus {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
   box-sizing: border-box;
@@ -1299,14 +1299,29 @@ input[type="checkbox"]:disabled:checked + label::after {
   background-position: -866px -10px;
 }
 
-.find-form .ico-calendar:hover {
+.arrival-date:hover ~ .ico-calendar,
+.departure-date:hover ~ .ico-calendar {
   width: 21px;
   height: 22px;
   background-position: -113px -10px;
   cursor: pointer;
 }
 
-.find-form .ico-calendar:active {
+.ico-calendar:hover {
+  width: 21px;
+  height: 22px;
+  background-position: -113px -10px;
+  cursor: pointer;
+}
+
+.arrival-date:focus ~ .ico-calendar,
+.departure-date:focus ~ .ico-calendar {
+  width: 21px;
+  height: 22px;
+  background-position: -72px -10px;
+}
+
+.ico-calendar:active {
   width: 21px;
   height: 22px;
   background-position: -72px -10px;
@@ -1314,67 +1329,87 @@ input[type="checkbox"]:disabled:checked + label::after {
 
 .adult,
 .child {
-  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 50%;
 }
 
-.age input {
-  width: 114px;
-  padding: 6px 50px;
+.quantity-btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
 }
 
-.increase {
-  z-index: 2;
-  position: absolute;
-  top: 14px;
-  right: 15px;
-  width: 11px;
-  height: 11px;
-  background-image: url("../img/sprite-icons.png");
-  background-repeat: no-repeat;
-  background-position: -939px -10px;
-}
-
-.increase:hover {
-  width: 11px;
-  height: 11px;
-  background-position: -603px -10px;
+.quantity-btn:hover {
   cursor: pointer;
 }
 
-.increase:active {
-  width: 11px;
-  height: 11px;
-  background-position: -572px -10px;
+.age input {
+  width: 38px;
+  height: 38px;
+  padding: 6px 0;
+  text-align: center;
 }
 
-.decrease {
-  z-index: 2;
+.quantity-btn::before {
+  content: "";
   position: absolute;
-  top: 18px;
-  right: 90px;
-  width: 12px;
-  height: 3px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-image: url("../img/sprite-icons.png");
   background-repeat: no-repeat;
+
+}
+
+.quantity-btn-decrease::before {
+  width: 12px;
+  height: 3px;
   background-position: -907px -10px;
 }
 
-.decrease:hover {
+.quantity-btn-decrease:hover::before {
   width: 12px;
   height: 3px;
   background-position: -274px -10px;
   cursor: pointer;
 }
 
-.decrease:active {
+.quantity-btn-decrease:active::before {
   width: 12px;
   height: 3px;
   background-position: -242px -10px;
 }
 
+.quantity-btn-increase::before {
+  width: 11px;
+  height: 11px;
+  background-position: -939px -10px;
+}
+
+.quantity-btn-increase:hover::before {
+  width: 11px;
+  height: 11px;
+  background-position: -603px -10px;
+  cursor: pointer;
+}
+
+.quantity-btn-increase:active::before {
+  width: 11px;
+  height: 11px;
+  background-position: -572px -10px;
+}
+
+/*
+.decrease:active {
+  width: 12px;
+  height: 3px;
+  background-position: -242px -10px;
+}
+*/
 .age .child-quantity {
   margin-left: 50px;
   width: 65px;
