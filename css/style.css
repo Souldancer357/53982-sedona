@@ -10,162 +10,6 @@
   font-weight: 300;
 }
 
-.icons {
-  background-image: url("../img/sprite-icons.png");
-  background-repeat: no-repeat;
-  display: block;
-}
-
-.icons-ico-arrow-active {
-  width: 11px;
-  height: 10px;
-  background-position: -10px -10px;
-}
-
-.icons-ico-arrow-hvr {
-  width: 11px;
-  height: 10px;
-  background-position: -41px -10px;
-}
-
-.icons-ico-calendar-down {
-  width: 21px;
-  height: 22px;
-  background-position: -72px -10px;
-}
-
-.icons-ico-calendar-hvr {
-  width: 21px;
-  height: 22px;
-  background-position: -113px -10px;
-}
-
-.icons-ico-checkbox {
-  width: 22px;
-  height: 22px;
-  background-position: -154px -10px;
-}
-
-.icons-ico-checkbox-active {
-  width: 26px;
-  height: 22px;
-  background-position: -196px -10px;
-}
-
-.icons-ico-decrease-down {
-  width: 12px;
-  height: 3px;
-  background-position: -242px -10px;
-}
-
-.icons-ico-decrease-hvr {
-  width: 12px;
-  height: 3px;
-  background-position: -274px -10px;
-}
-
-.icons-ico-footer-logo {
-  width: 113px;
-  height: 39px;
-  background-position: -306px -10px;
-}
-
-.icons-ico-footer-logo-hvr {
-  width: 113px;
-  height: 39px;
-  background-position: -439px -10px;
-}
-
-.icons-ico-increase-down {
-  width: 11px;
-  height: 11px;
-  background-position: -572px -10px;
-}
-
-.icons-ico-increase-hvr {
-  width: 11px;
-  height: 11px;
-  background-position: -603px -10px;
-}
-
-.icons-ico-social-fb {
-  width: 10px;
-  height: 19px;
-  background-position: -634px -10px;
-}
-
-.icons-ico-social-tw {
-  width: 17px;
-  height: 15px;
-  background-position: -664px -10px;
-}
-
-.icons-ico-social-yt {
-  width: 20px;
-  height: 16px;
-  background-position: -701px -10px;
-}
-
-.icons-ico-star {
-  width: 17px;
-  height: 17px;
-  background-position: -741px -10px;
-}
-
-.icons-ico-xcheckbox-disabled- {
-  width: 22px;
-  height: 22px;
-  background-position: -778px -10px;
-}
-
-.icons-ico-xcheckbox-disabled-active {
-  width: 26px;
-  height: 22px;
-  background-position: -820px -10px;
-}
-
-.icons-ico-xxcalendar {
-  width: 21px;
-  height: 22px;
-  background-position: -866px -10px;
-}
-
-.icons-ico-xxdecrease {
-  width: 12px;
-  height: 3px;
-  background-position: -907px -10px;
-}
-
-.icons-ico-xxincrease {
-  width: 11px;
-  height: 11px;
-  background-position: -939px -10px;
-}
-
-.sprite-services {
-  background-image: url("../img/sprite-services.png");
-  background-repeat: no-repeat;
-  display: block;
-}
-
-.sprite-services-service1 {
-  width: 75px;
-  height: 72px;
-  background-position: -10px -10px;
-}
-
-.sprite-services-service2 {
-  width: 74px;
-  height: 70px;
-  background-position: -105px -10px;
-}
-
-.sprite-services-service3 {
-  width: 64px;
-  height: 76px;
-  background-position: -199px -10px;
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -173,7 +17,7 @@ html, body {
 
 body {
   min-width: 1200px;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 300;
 }
 
@@ -196,6 +40,12 @@ a {
   text-decoration: none;
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .container {
   position: relative;
   width: 1200px;
@@ -203,7 +53,7 @@ a {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.main-header {
+.header {
   position: relative;
 }
 
@@ -213,24 +63,15 @@ a {
   background-color: #ffffff;
 }
 
-/*.main-navigation .header-logo {
-  float: left;
-  width: 138px;
-  height: 56px;
-  margin: 0 auto;
-}
-*/
-
 .main-navigation li {
   float: left;
   width: 239px;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
   padding: 16px 0;
-  text-transform: uppercase; /*Это типографика или оформление?*/
   font-weight: 500;
   font-size: 14px;
   line-height: 26px;
+  text-transform: uppercase;
 }
 
 .main-navigation li:hover {
@@ -272,29 +113,31 @@ a {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
   display: block;
   margin: 0 auto;
   width: 138px;
   height: 70px;
-  z-index: 2;
 }
 
 .index-logo {
-  background: url("../img/bg.jpg") 0 0 no-repeat;
+  position: relative;
   height: 507px;
   padding-top: 76px;
-  box-sizing: border-box; /*Это блочная модель или оформление? Это оформление.*/
-  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #ddeaf3 url("../img/bg.jpg") 0 0 no-repeat;
 }
 
 .index-logo::after {
   content: "";
-  background: url("../img/plate.png") 0 0 no-repeat;
-  width: 1200px;
-  height: 57px;
-  display: block;
   position: absolute;
   bottom: 0;
+  display: block;
+  width: 1200px;
+  height: 57px;
+  background: url("../img/plate.png") 0 0 no-repeat;
 }
 
 .index-logo img {
@@ -306,7 +149,9 @@ a {
 .index-content {
   padding-top: 59px;
   padding-bottom: 50px;
-  box-sizing: border-box; /*Досортировать*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #ffffff;
 }
 
@@ -314,10 +159,10 @@ a {
   width: 450px;
   min-height: 52px;
   margin: 0 auto 28px;
-  text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 26px;
+  text-transform: uppercase;
   color: #000000;
 }
 
@@ -325,10 +170,10 @@ a {
   width: 500px;
   min-height: 26px;
   margin: 0 auto;
-  text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
   line-height: 26px;
+  text-transform: uppercase;
   color: #333333;
 }
 
@@ -337,6 +182,8 @@ a {
   width: 400px;
   min-height: 256px;
   padding-top: 55px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #81b3d2;
 }
@@ -345,10 +192,10 @@ a {
   width: 151px;
   min-height: 42px;
   margin: 0 auto 27px;
-  text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 21px;
+  text-transform: uppercase;
   color: #ffffff;
 }
 
@@ -369,10 +216,10 @@ a {
   width: 300px;
   min-height: 42px;
   margin: 0 auto;
-  text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
+  text-transform: uppercase;
   color: #ffffff;
 }
 
@@ -391,6 +238,8 @@ a {
   width: 400px;
   min-height: 330px;
   padding-top: 55px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #ffffff;
 }
@@ -398,9 +247,8 @@ a {
 .service::before {
   content: "";
   display: block;
-  background-repeat: no-repeat;
-  background: url("../img/sprite-services.png");
   margin: 0 auto 30px;
+  background: url("../img/sprite-services.png") 0 0 no-repeat;
 }
 
 .service:nth-child(1)::before {
@@ -426,10 +274,10 @@ a {
   width: 110px;
   min-height: 21px;
   margin: 0 auto 25px;
-  text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 21px;
+  text-transform: uppercase;
   color: #000000;
 }
 
@@ -437,10 +285,10 @@ a {
   width: 300px;
   min-height: 42px;
   margin: 0 auto;
-  text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
+  text-transform: uppercase;
   color: #333333;
 }
 
@@ -457,6 +305,8 @@ a {
   width: 400px;
   min-height: 256px;
   padding-top: 47px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -464,10 +314,10 @@ a {
   width: 130px;
   min-width: 42px;
   margin: 0 auto 24px;
-  text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 21px;
+  text-transform: uppercase;
   color: #000000;
 }
 
@@ -492,10 +342,10 @@ a {
   width: 275px;
   min-width: 42px;
   margin: 0 auto;
-  text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
+  text-transform: uppercase;
   color: #333333;
 }
 
@@ -503,6 +353,8 @@ a {
   width: 1200px;
   height: 291px;
   padding-top: 55px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #ffffff;
 }
@@ -511,10 +363,10 @@ a {
   width: 310px;
   min-height: 24px;
   margin: 0 auto 31px;
-  text-transform: uppercase;
   font-weight: 500;
   font-size: 30px;
   line-height: 24px;
+  text-transform: uppercase;
   color: #000000;
 }
 
@@ -522,23 +374,22 @@ a {
   width: 450px;
   min-height: 58px;
   margin: 0 auto 37px;
-  text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
+  text-transform: uppercase;
   color: #333333;
 }
 
-/* Здесь нужно min-height, width и margin? */
 .search-btn {
   display: block;
   width: 570px;
   margin: 0 auto;
   padding: 30px 0;
-  text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 26px;
+  text-transform: uppercase;
   color: #ffffff;
   background-color: #766357;
 }
@@ -546,20 +397,22 @@ a {
 .map {
   width: 1200px;
   height: 593px;
-  background: url("../img/map.jpg") 0 0 no-repeat;
+  background: #cbdda9 url("../img/map.jpg") 0 0 no-repeat;
 }
 
 .content-top {
-  background: url("../img/filter-bg.jpg"); /*Это к чему относится?*/
   padding: 25px 73px 12px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  background: #2b363a url("../img/filter-bg.jpg");
 }
 
 .filter-title {
-  text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
+  text-transform: uppercase;
   color: #ffffff;
 }
 
@@ -568,17 +421,16 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] + label {
+  position: relative;
   display: block;
-  /*Можно ли ширину задавать в зависимотсти от контента?*/
   width: 130px;
   margin: 24px 0;
   padding-left: 40px;
-  text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
+  text-transform: uppercase;
   color: #ffffff;
-  position: relative;
   cursor: pointer;
 }
 
@@ -589,9 +441,7 @@ input[type="checkbox"] + label::before {
   left: 0;
   width: 22px;
   height: 22px;
-  background-position: -154px -10px;
-  background-image: url("../img/sprite-icons.png");
-  background-repeat: no-repeat;
+  background: url("../img/sprite-icons.png") -154px -10px no-repeat;
 }
 
 input[type="checkbox"]:checked + label::after {
@@ -601,9 +451,7 @@ input[type="checkbox"]:checked + label::after {
   left: 0;
   width: 26px;
   height: 22px;
-  background-position: -196px -10px;
-  background-image: url("../img/sprite-icons.png");
-  background-repeat: no-repeat;
+  background: url("../img/sprite-icons.png") -196px -10px no-repeat;
 }
 
 input[type="checkbox"]:disabled + label {
@@ -618,36 +466,31 @@ input[type="checkbox"]:disabled:checked + label::after {
   background-position: -820px -10px;
 }
 
-/*Не получилось сделать отступы для content-top*/
-/*Высоту закомментировал, у меня по ней вопрос)*/
-.filter-block-left-first {
+.filter-block-infrastructure {
   float: left;
   width: 240px;
-  /*height: 157px;*/
   text-align: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.filter-block-left-second {
+.filter-block-building {
   float: left;
   width: 288px;
   padding-left: 14px;
-  /*height: 157px;*/
-  text-align: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  text-align: left;
 }
 
 .filter-block-right {
   float: right;
   width: 328px;
-  /*Почему он не задает высоту?*/
-  /*height: 157px;*/
-  /*Это не задает*/
   text-align: left;
-  /*Это не задает*/
-  /*box-sizing: border-box;*/
-  color: #ffffff;
   text-transform: uppercase;
+  color: #ffffff;
 }
 
 .filter-block-right-title {
@@ -659,12 +502,9 @@ input[type="checkbox"]:disabled:checked + label::after {
 
 .price-controls {
   position: relative;
-
   height: 36px;
   margin-bottom: 20px;
-
   font-size: 0;
-
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
@@ -674,22 +514,17 @@ input[type="checkbox"]:disabled:checked + label::after {
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 2px;
   height: 22px;
-
   background: #ffffff;
   transform: translate(-50%, -50%);
 }
 
 .price-controls label {
   display: inline-block;
-
   font-size: 14px;
-  /*Почему он задает 38*/
   line-height: 38px;
   vertical-align: top;
-
   cursor: pointer;
 }
 
@@ -702,48 +537,39 @@ input[type="checkbox"]:disabled:checked + label::after {
 .price-controls input {
   width: 50px;
   margin: 0;
-
   color: inherit;
   font: inherit;
-
   background: none;
   border: none;
-  /*Что это такое?*/
   outline: none;
 }
 
 .range-controls {
   position: relative;
-
   margin-bottom: 32px;
 }
 
 .range-controls .scale {
   height: 2px;
-
   background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
   width: 80%;
   height: 2px;
-
   background: #ffffff;
 }
 
 .range-toggle {
   position: absolute;
   top: -9px;
-
   width: 4px;
   height: 4px;
-
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
-
 }
 
 .range-toggle:hover {
@@ -762,12 +588,10 @@ input[type="checkbox"]:disabled:checked + label::after {
   display: block;
   margin: 0 auto;
   padding: 6px 35px;
-
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
   text-transform: uppercase;
-
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -777,12 +601,13 @@ input[type="checkbox"]:disabled:checked + label::after {
 
 .filter-btn:hover {
   color: #000000;
-
   background: #ffffff;
 }
 
 .content-center {
   padding: 30px 73px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #fefefe;
 }
@@ -791,30 +616,34 @@ input[type="checkbox"]:disabled:checked + label::after {
   float: left;
   width: 165px;
   min-height: 26px;
-  text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 26px;
   text-align: left;
+  text-transform: uppercase;
   color: #000000;
 }
 
-/*Не опускается!*/
+.sort {
+  float: left;
+  width: 889px;
+}
+
 .sort-title {
   float: left;
   width: 116px;
   min-height: 26px;
-  padding-top: 7px;
-  text-transform: uppercase;
+  padding-top: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   text-align: left;
-  box-sizing: border-box;
+  text-transform: uppercase;
   color: #000000;
 }
-
-/*Если смотреть в хроме, там есть класс sort 1200 на 0. Это не нормально?*/
 
 .sort-by {
   float: left;
@@ -824,8 +653,8 @@ input[type="checkbox"]:disabled:checked + label::after {
 
 .sort-by li {
   display: inline-block;
-  margin-right: 28px;
   vertical-align: middle;
+  margin-right: 28px;
 }
 
 .sort-by li:last-child {
@@ -833,10 +662,10 @@ input[type="checkbox"]:disabled:checked + label::after {
 }
 
 .sort-by a {
-  text-transform: uppercase;
   font-weight: 300;
   font-size: 12px;
   line-height: 18px;
+  text-transform: uppercase;
   color: #b1b1b1;
   border-bottom: 1px dotted #81b3d2;
 }
@@ -858,8 +687,10 @@ input[type="checkbox"]:disabled:checked + label::after {
 .sort-icons {
   float: right;
   width: 400px;
-  text-align: right;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  text-align: right;
 }
 
 .sort-icon {
@@ -868,7 +699,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   width: 11px;
   height: 10px;
   margin-left: 12px;
-  font-size: 0px;
+  font-size: 0;
   background-color: white;
   vertical-align: middle;
   cursor: pointer;
@@ -879,13 +710,11 @@ input[type="checkbox"]:disabled:checked + label::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 11px;
   height: 10px;
+  background: url("../img/sprite-icons.png") -41px -10px no-repeat;
+  transform: translate(-50%, -50%);
   opacity: 0.3;
-  background-position: -41px -10px;
-  background-image: url("../img/sprite-icons.png");
-  background-repeat: no-repeat;
 }
 
 .sort-icon:hover::before {
@@ -912,9 +741,11 @@ input[type="checkbox"]:disabled:checked + label::after {
 
 .catalog-item {
   height: 151px;
-  padding: 30px 73px;
-  border-top: 1px solid #e5e5e5;
+  padding: 27px 73px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  border-top: 1px solid #e5e5e5;
 }
 
 .catalog-item:last-child {
@@ -927,8 +758,10 @@ input[type="checkbox"]:disabled:checked + label::after {
   height: 90px;
   padding-top: 0;
   margin-right: 30px;
-  text-align: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  text-align: left;
 }
 
 .catalog-item-info {
@@ -936,16 +769,17 @@ input[type="checkbox"]:disabled:checked + label::after {
   width: 363px;
   height: 91px;
   text-align: left;
-  vertical-align: top; /*А это к чему относится?*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .catalog-item-title {
-  text-transform: uppercase;
-  font-weight: 500;
   margin-bottom: 9px;
   font-size: 21px;
   line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .catalog-item-title a {
@@ -962,36 +796,40 @@ input[type="checkbox"]:disabled:checked + label::after {
 
 .catalog-item-type {
   display: inline-block;
+  vertical-align: top;
   width: 105px;
   margin-right: 6px;
   margin-bottom: 15px;
-  text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
+  text-transform: uppercase;
   color: #333333;
 }
 
 .catalog-item-cost {
-  text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
+  text-transform: uppercase;
   color: #333333;
 }
 
 .catalog-item-btn {
   display: inline-block;
+  vertical-align: top;
   width: 110px;
   height: 27px;
   margin-right: 2px;
   padding: 3px 0;
-  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  box-sizing: border-box;
+  text-transform: uppercase;
   color: #ffffff;
   background-color: #81b3d2;
 }
@@ -1019,36 +857,49 @@ input[type="checkbox"]:disabled:checked + label::after {
   background-color: #503e33;
 }
 
+.catalog-item-stars {
+  font-size: 0;
+}
+
+.star {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 6px;
+}
+
 .star::before {
   content: "";
   display: inline-block;
   vertical-align: top;
   width: 17px;
   height: 17px;
-  background: url("../img/sprite-icons.png");
-  background-position: -741px -10px;
-  background-repeat: no-repeat;
+  background: url("../img/sprite-icons.png") -741px -10px no-repeat;
 }
 
 .catalog-item-rating-info {
   float: right;
   width: 150px;
-  text-align: right;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  text-align: right;
 }
 
 .catalog-item-rating {
   display: inline-block;
+  vertical-align: top;
   width: 110px;
   height: 27px;
   padding: 3px 0;
-  margin-top: 43px;
-  text-transform: uppercase;
+  margin-top: 47px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  box-sizing: border-box;
+  text-transform: uppercase;
   color: #666666;
   background-color: #f2f2f2;
 }
@@ -1061,8 +912,8 @@ input[type="checkbox"]:disabled:checked + label::after {
 .main-footer {
   position: absolute;
   bottom: 0;
-  background-color: rgba(254, 254, 254, 0.9);
   z-index: 2;
+  background-color: rgba(254, 254, 254, 0.9);
 }
 
 .footer-hashtag {
@@ -1070,6 +921,8 @@ input[type="checkbox"]:disabled:checked + label::after {
   width: 400px;
   min-height: 120px;
   padding: 45px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1077,10 +930,10 @@ input[type="checkbox"]:disabled:checked + label::after {
   width: 140px;
   min-height: 26px;
   margin: 0 auto;
-  text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 26px;
+  text-transform: uppercase;
   color: #000000;
 }
 
@@ -1089,23 +942,23 @@ input[type="checkbox"]:disabled:checked + label::after {
   width: 400px;
   min-height: 120px;
   padding: 35px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 0;
   text-align: center;
-  box-sizing: border-box;
 }
 
 .social-btn {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   width: 46px;
   height: 48px;
   margin: 0 3px;
-
   font-size: 0;
   text-decoration: none;
-
   background-color: #81b3d2;
-  position: relative;
 }
 
 .social-btn:hover {
@@ -1121,9 +974,8 @@ input[type="checkbox"]:disabled:checked + label::after {
   position: absolute;
   top: 50%;
   left: 50%;
+  background: url("../img/sprite-icons.png") 0 0 no-repeat;
   transform: translate(-50%, -50%);
-  background-image: url("../img/sprite-icons.png");
-  background-repeat: no-repeat;
 }
 
 .social-btn-twitter::before {
@@ -1153,26 +1005,27 @@ input[type="checkbox"]:disabled:checked + label::after {
   width: 400px;
   min-height: 120px;
   padding: 40px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/*Здесь нужна ширина и высота или она наследуется?*/
 .footer-copyright .copyright {
   display: inline-block;
-  text-transform: uppercase;
+  vertical-align: middle;
   font-weight: 300;
   font-size: 14px;
   line-height: 26px;
-  vertical-align: middle;
+  text-transform: uppercase;
   color: #000000;
 }
 
 .footer-copyright a {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   width: 113px;
   height: 39px;
-  vertical-align: middle;
 }
 
 .footer-copyright a::before {
@@ -1180,12 +1033,10 @@ input[type="checkbox"]:disabled:checked + label::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 113px;
   height: 39px;
-  background-position: -306px -10px;
-  background-image: url("../img/sprite-icons.png");
-  background-repeat: no-repeat;
+  background: url("../img/sprite-icons.png") -306px -10px no-repeat;
+  transform: translate(-50%, -50%);
 }
 
 .footer-copyright a:hover::before {
@@ -1197,18 +1048,33 @@ input[type="checkbox"]:disabled:checked + label::after {
   opacity: 0.3;
 }
 
-@keyframes bounce {
-  0%   {
-    transform: translateY(-2000px);
-  }
-  70%  {
-    transform: translateY(30px);
-  }
-  90%  {
-    transform: translateY(-10px);
+@-webkit-keyframes bounce {
+  0% {
+    opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
   }
 }
 
@@ -1228,25 +1094,24 @@ input[type="checkbox"]:disabled:checked + label::after {
   position: absolute;
   top: 2169px;
   left: 631px;
-
   display: none;
   width: 460px;
   height: 285px;
   margin-left: -316px;
   padding: 55px 55px;
-
   color: #000000;
   background-color: #ffffff;
-  /*Кажется нужно поправить тень :D*/
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.4);
 }
 
 .modal-content-show {
   display: block;
+  -webkit-animation: bounce 0.6s;
   animation: bounce 0.6s;
 }
 
 .modal-error {
+  -webkit-animation: shake 0.6s;
   animation: shake 0.6s;
 }
 
@@ -1258,48 +1123,42 @@ input[type="checkbox"]:disabled:checked + label::after {
 }
 
 .find-form .age {
-  font-size: 0;
   margin-bottom: 55px;
+  font-size: 0;
 }
 
 .find-form label {
   display: inline-block;
-
+  vertical-align: top;
   width: 115px;
   padding: 6px 0;
-  text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
   line-height: 26px;
-  vertical-align: top;
-
+  text-transform: uppercase;
   color: #000000;
   cursor: pointer;
 }
 
 .find-form input {
   display: inline-block;
-
+  vertical-align: top;
   width: 345px;
   height: 38px;
   margin: 0;
-  padding: 6px 15px;
-  padding-right: 40px;
-
+  padding: 6px 40px 6px 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
   line-height: 26px;
-  font-family: "PT Sans", "Arial", sans-serif;
-
-  vertical-align: top;
-
+  color: #000000;
   background-color: #f2f2f2;
   border: 2px solid #f2f2f2;
   outline: none;
-
-  color: #000000;
-  box-sizing: border-box;
 }
 
 .find-form input:hover {
@@ -1318,9 +1177,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   left: 427px;
   width: 21px;
   height: 22px;
-  background-image: url("../img/sprite-icons.png");
-  background-repeat: no-repeat;
-  background-position: -866px -10px;
+  background: url("../img/sprite-icons.png") -866px -10px no-repeat;
 }
 
 .arrival-date:hover ~ .ico-calendar,
@@ -1383,10 +1240,8 @@ input[type="checkbox"]:disabled:checked + label::after {
   position: absolute;
   top: 50%;
   left: 50%;
+  background: url("../img/sprite-icons.png") 0 0 no-repeat;
   transform: translate(-50%, -50%);
-  background-image: url("../img/sprite-icons.png");
-  background-repeat: no-repeat;
-
 }
 
 .quantity-btn-decrease::before {
@@ -1428,27 +1283,30 @@ input[type="checkbox"]:disabled:checked + label::after {
 }
 
 .age .child-quantity {
-  margin-left: 50px;
   width: 65px;
+  margin-left: 50px;
 }
 
 .find-btn {
   display: inline-block;
+  vertical-align: top;
   width: 458px;
   height: 58px;
   padding: 16px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
-  box-sizing: border-box;
   color: #ffffff;
   background-color: #81b3d2;
   border: none;
   outline: none;
   cursor: pointer;
-  font-family: "PT Sans", sans-serif;
 }
 
 .find-btn:hover {
@@ -1459,10 +1317,3 @@ input[type="checkbox"]:disabled:checked + label::after {
   background-color: #5496bd;
   color: #88b6d1;
 }
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-

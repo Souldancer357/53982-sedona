@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="container">
-  <header class="main-header">
+  <header class="header">
     <a href="index.html" class="header-logo">
       <img src="img/logo.png" width="138" height="70" alt="Логотип меню">
     </a>
@@ -29,9 +30,9 @@
     </nav>
   </header>
   <main>
-    <div class="content-top clearfix">
+    <div class="content-top">
       <form class="filter-form clearfix" action="#" method="get">
-        <div class="filter-block-left filter-block-left-first">
+        <div class="filter-block-left filter-block-infrastructure">
           <div class="filter-title">Инфраструктура:</div>
           <div class="filter-item">
             <input type="checkbox" name="pool" id="pool-field" disabled>
@@ -46,7 +47,7 @@
             <label for="wifi-field">WI-FI</label>
           </div>
         </div>
-        <div class="filter-block-left filter-block-left-second">
+        <div class="filter-block-left filter-block-building">
           <div class="filter-title">Тип жилья:</div>
           <div class="filter-item">
             <input type="checkbox" name="hotel" id="hotel-field">
@@ -64,8 +65,8 @@
         <div class="filter-block-right">
           <div class="filter-block-right-title">Стоимость в сутки (Р):</div>
           <div class="price-controls">
-            <label class="min-price">От <input type="text" name="min-price" value="0"></label>
-            <label class="max-price">До <input type="text" name="max-price" value="3000"></label>
+            <label class="min-price" for="min">От <input type="text" name="min-price" value="0" id="min"></label>
+            <label class="max-price" for="max">До <input type="text" name="max-price" value="3000" id="max"></label>
           </div>
           <div class="range-controls">
             <div class="scale">
@@ -82,7 +83,7 @@
     </div>
     <div class="content-center clearfix">
       <div class="found">Найдено: 3</div>
-      <div class="sort">
+      <div class="sort clearfix">
         <div class="sort-title">Сортировка:</div>
         <ul class="sort-by">
           <li><a class="current" href="#">По цене</a></li>
