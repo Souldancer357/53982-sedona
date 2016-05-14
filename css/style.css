@@ -120,6 +120,11 @@ a {
   height: 70px;
 }
 
+.header-logo img {
+  width: 100%;
+  height: 100%;
+}
+
 .index-logo {
   position: relative;
   height: 507px;
@@ -140,10 +145,15 @@ a {
   background: url("../img/plate.png") 0 0 no-repeat;
 }
 
-.index-logo img {
-  display: block;
+.index-welcome {
   width: 458px;
+  height: 352px;
   margin: 0 auto;
+}
+
+.index-welcome img {
+  width: 100%;
+  height: 100%;
 }
 
 .index-content {
@@ -177,11 +187,16 @@ a {
   color: #333333;
 }
 
+.feature {
+  background-color: #81b3d2;
+}
+
 .feature-text {
   float: left;
   width: 400px;
   min-height: 256px;
   padding-top: 55px;
+  padding-bottom: 52px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -233,11 +248,17 @@ a {
   height: 256px;
 }
 
+.feature-image img {
+  width: 100%;
+  height: 100%;
+}
+
 .service {
   float: left;
   width: 400px;
   min-height: 330px;
   padding-top: 55px;
+  padding-bottom: 55px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -305,6 +326,7 @@ a {
   width: 400px;
   min-height: 256px;
   padding-top: 47px;
+  padding-bottom: 47px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -406,6 +428,7 @@ a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: #2b363a url("../img/filter-bg.jpg");
+  background-size: cover;
 }
 
 .filter-title {
@@ -616,6 +639,7 @@ input[type="checkbox"]:disabled:checked + label::after {
   float: left;
   width: 165px;
   min-height: 26px;
+  margin-right: 5px;
   font-weight: 500;
   font-size: 21px;
   line-height: 26px;
@@ -626,7 +650,7 @@ input[type="checkbox"]:disabled:checked + label::after {
 
 .sort {
   float: left;
-  width: 889px;
+  width: 884px;
 }
 
 .sort-title {
@@ -647,7 +671,7 @@ input[type="checkbox"]:disabled:checked + label::after {
 
 .sort-by {
   float: left;
-  width: 247px;
+  width: 650px;
   text-align: left;
 }
 
@@ -686,7 +710,7 @@ input[type="checkbox"]:disabled:checked + label::after {
 
 .sort-icons {
   float: right;
-  width: 400px;
+  width: 100px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -740,7 +764,7 @@ input[type="checkbox"]:disabled:checked + label::after {
 }
 
 .catalog-item {
-  height: 151px;
+  min-height: 151px;
   padding: 27px 73px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -764,10 +788,15 @@ input[type="checkbox"]:disabled:checked + label::after {
   text-align: left;
 }
 
+.catalog-item-img img {
+  width: 100%;
+  height: 100%;
+}
+
 .catalog-item-info {
   float: left;
   width: 363px;
-  height: 91px;
+  min-height: 91px;
   text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
